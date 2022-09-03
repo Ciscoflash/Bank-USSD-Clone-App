@@ -2,15 +2,38 @@
 const ussd = "*966#";
 let acc
 // Welcome Function
-WelcomeMessage();
-function WelcomeMessage(){
-   acc = prompt("Welcome to my USSD App \n please enter the Zenith ussd code" , "*966#")
-   Recharge()
+// WelcomeMessage();
+// function WelcomeMessage(){
+//    acc = prompt("Welcome to my USSD App \n please enter the Zenith ussd code" , "*966#")
+//    Recharge()
+// }
+
+let one = document.getElementById("one")
+let two = document.getElementById("two")
+let btn = document.getElementById("btnSubmit")
+
+btn.addEventListener('click', function(){
+    acceptValues()
+
+   //  if(comt === "1"){
+   //    console.log("Correct")
+   //  }
+   //  else{
+   //    console.log("Wrong")
+   //  }
+})
+
+function acceptValues(){
+ compt1 = one.value;
+ comt1 = two.value;
+
+ Recharge()
 }
 
 function Recharge(){
    let comt
    let compt1
+   let comt1
    let send1
    let amount
    let ac_num
@@ -29,11 +52,12 @@ function Recharge(){
    let amount4
    let pin4
    let confirm4
-if(acc === ussd){
-   comt= prompt("Welcome to USSD Banking Please note that a N6.98 network \n charge will be applied to your bank account for banking services on this channel. \n 1. Proceed \n 2. Cancel")
+// if(acc === ussd){
+//    comt= prompt("Welcome to USSD Banking Please note that a N6.98 network \n charge will be applied to your bank account for banking services on this channel. \n 1. Proceed \n 2. Cancel")
    
    if(comt === "1"){
-     compt1 = prompt("Eazybanking \n 1> Transfer \n 2> Airtime \n 3> Data \n 4> bills Payment \n 5> Check Balance \n 6> Open Account \n 7> Card Requests \n 8> Register \n 9>Next ")
+   //   compt1 = prompt("Eazybanking \n 1> Transfer \n 2> Airtime \n 3> Data \n 4> bills Payment \n 5> Check Balance \n 6> Open Account \n 7> Card Requests \n 8> Register \n 9>Next ")
+   console.log("Correct")
    
      if(compt1 === "1"){
         send1 = prompt("1> Send to Account Number \n 2> Pay with PhoneNumber \n 3> Send to Merchant ID")
@@ -133,11 +157,11 @@ if(acc === ussd){
       Exit()
    }
    }
-   else{
-      acc = alert("Wrong USSD Credentials")
-      newTransaction()
-   }
-}
+   // else{
+   //    acc = alert("Wrong USSD Credentials")
+   //    newTransaction()
+   // }
+
 
 function Exit(){
    if (confirm("Are you sure you want to exit the application?")){

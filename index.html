@@ -5,10 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>USSD CODE</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
+    <div class="main">
+        <div class="main_inner">
+            <h1>WELCOME TO URBAN BANK USSD</h1>
+            <p class="lg_screen">Please note that a N6.98 network charge  will be applied to <br> your bank account for banking services on this channel. </p>
+            <p class="sm_screen">Please note that a N6.98 network charge  will be applied to your bank account for banking services on this channel. </p>
 
-    <script src="main.js"></script>
+            <form action="">
+            <select name="" id="Transaction">
+                <option value="">SELECT AN OPTION</option>
+                <option value="transfer">Transfer</option>
+                <option value="airtime">Airtime</option>
+                <option value="data">Data</option>
+                <option value="bill">bills Payment</option>
+                <option value="check">Check Balance</option>
+                <option value="open">Open Account</option>
+                <option value="card">Card Requests</option>
+                <option value="reg">Register</option>
+                <option value="next">Next</option>
+            </select> <br>
+            <label for="Transaction" id="selectError"></label>
+            <br>
+            <label for="AcNum" id="AcTitle">Enter Account Number:</label> <br>
+            <input type="number" id="AcNum"> <br>
+            <label for="" id="AcError"></label><br>
+            <label for="Bank" id="AmountTitle">Enter Amount:</label> <br> 
+            <input type="text" id="Amount"> <br>
+            <label for="" id="AmountError"></label>
+            <br> <br>
+            <select name="" id="Destination">
+                <option value="">SELECT DESTINATION</option>
+                <option value="zenith bank">Zenith Bank</option>
+                <option value="first bank">First Bank</option>
+                <option value="diamond bank">Diamond Bank</option>
+                <option value="gt bank">GT Bank</option>
+                <option value="check">Access Bank</option>
+                <option value="open">Polaris Bank</option>
+                <option value="card">FCMB</option>
+                <option value="reg">UBA Bank</option>
+            </select> <br><br>
+            <label for="Pin" id="PinTitle">Enter Pin:</label> <br> 
+            <input type="password" placeholder="" id="Pin"> <br><br>
+            <label for="" id="PinError"></label> <br>
+            <button type="button" id="btnProceed">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="ussd.js"></script>
 </body>
 </html>

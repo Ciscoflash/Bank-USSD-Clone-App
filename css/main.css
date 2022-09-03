@@ -1,0 +1,181 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.main{
+    width: 100%;
+    height: auto;
+    background-image: url("../images/fifth.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 0px;
+    padding: 0px;
+}
+.main .main_inner{
+    width: 100%;
+    height: auto; /*450px initially*/
+    background: rgba(0, 0, 0, .72);
+    margin: auto;
+    color: white;
+    padding: 0px;
+    /* padding-bottom: 60px; */
+}
+.main .main_inner p{
+    font-size: 24px;
+    text-align: center;
+}
+.main .main_inner form label{
+    /* font-size: 23px; */
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-start;
+    /* padding-left: 390px; */
+    
+}
+.main .main_inner form button{
+    font-size: 25px;
+    padding: 10px;
+    background: transparent;
+    border-radius: 7px;
+    color: white;
+    margin-top: 20px;
+    width: 20%;
+    margin-left:0px;
+    border: 2px solid green;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.main .main_inner form #btnsuccess{
+    font-size: 17px;
+}
+.main .main_inner form select{
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 0px;
+    width: 50%;
+}
+.main .main_inner form input{
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 0px;
+}
+.main .main_inner form {
+    text-align: left;
+    padding-top: 20px;
+    width: 70%;
+    margin: auto;
+}
+.main .main_inner form input{
+    width: 50%;
+}
+.main .main_inner h1{
+    text-align: center;
+    font-size: 3em;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    background: url("../images/six.jpg");
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text 7.5s linear infinite;
+}
+.main .main_inner .sm_screen{
+    display: none;
+}
+
+@keyframes text {
+    form{
+        background-position: 0% 50%;
+    }
+    to{
+        background-position: 100% 100%;
+    }
+}
+
+@media (max-width:768px) {
+    .main .main_inner h1{
+        font-size: 2.5em;
+    }
+    .main .main_inner p{
+        font-size: 18px;
+    }
+    .main .main_inner form{
+        width: 80%;
+    }
+    .main .main_inner form button{
+        width: 30%;
+    }
+    .main .main_inner .sm_screen{
+        display: none;
+    }
+}
+@media (max-width:425px) {
+    .main .main_inner h1{
+        font-size: 2em;
+    }
+    .main .main_inner .sm_screen{
+        display: block;
+    }
+    .main .main_inner .lg_screen{
+        display: none;
+    }
+    .main .main_inner form{
+        width: 60%;
+    }
+    .main .main_inner form input{
+        width: 80%;
+        padding: 10px;
+    }
+    .main .main_inner form select{
+        width: 80%;
+        font-size: 15px;
+    }
+    .main .main_inner form label{
+        font-size: 20px;
+    }
+    .main .main_inner form button{
+        width: 50%;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:375px) {
+    .main .main_inner h1{
+        font-size: 1.8em;
+    }
+    .main .main_inner #selectError{
+        font-size: 18px;
+    }
+    .main .main_inner form select{
+        width: 80%;
+        font-size: 12px;
+    }
+}
+@media (max-width:320px) {
+    .main .main_inner form label{
+        font-size: 16px;
+    }
+    .main .main_inner #selectError{
+        font-size: 15px;
+    }
+    .main .main_inner form select{
+        width: 80%;
+        font-size: 10px;
+    }
+    .main .main_inner form input{
+        width: 80%;
+        padding: 8px;
+    }
+    .main .main_inner form button{
+        width: 50%;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+}
